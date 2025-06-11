@@ -31,25 +31,25 @@ let filme4 = {
 }
 
 let filme5 = {
-    titulo:"Alien: Romulus",
+    titulo: "Alien: Romulus",
     foto: "filme5.jpg",
     avaliacao: "8/10",
     duracao: "1h 59m",
     link: "https://www.rottentomatoes.com/m/alien_romulus",
 }
 
-function fnMontaCartao(filmeAtual) {
-    document.querySelector(".lista-filmes").innerHTML += `
-        <div class="card-filme">
-            <img src="img/${filmeAtual.foto}">
-            <h3>${filmeAtual.titulo}</h3>
-            <span>⭐ ${filmeAtual.avaliacao}</span>
-            <a href="${filmeAtual.link}" target="_blank">Acesse:</a>
-        `
-}
 
-fnMontaCartao(filme1)
-fnMontaCartao(filme2)
-fnMontaCartao(filme3)
-fnMontaCartao(filme4)
-fnMontaCartao(filme5)
+let todosOsFilmes = [
+    filme1, filme2, filme3, filme4, filme5
+]
+
+todosOsFilmes.forEach((i)=>{
+    document.querySelector(".lista-filmes").innerHTML += `
+    <div class="card-filme">
+        <img src="img/${i.foto}">
+        <h3>${i.titulo}</h3>
+        <span>⭐ ${i.avaliacao}</span>
+        <a href="${i.link}" target="_blank">Acesse:</a>
+    </div>
+    `
+})
