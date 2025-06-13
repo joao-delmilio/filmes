@@ -33,6 +33,8 @@ header {
 .card-filme {
     border: 1px solid;
     padding: 5px;
+    width: 290px;
+    height: 450px;
 }
 
 .lista-filmes img {

@@ -5,7 +5,7 @@ async function fnPegarFilmes(){
     filmesTratados.forEach((filmeAtual) => {
         document.querySelector(".lista-filmes").innerHTML += `
         <div class="card-filme">
-            <img src="${filmeAtual.foto}"
+            <img src="${filmeAtual.foto}">
             <h3>${filmeAtual.titulo}</h3>
             <span>${filmeAtual.avaliacao}</span>
         </div>
